@@ -1,6 +1,7 @@
+mod upload;
 use clap::Parser;
 
-/// Simple program to greet a person
+// Simple program to greet a person
 #[derive(Parser, Debug)]
 #[command(version, about, long_about = None)]
 struct Args {
@@ -19,5 +20,10 @@ fn main() {
     for _ in 0..args.count {
         println!("Hello {}!", args.name);
     }
-}
 
+    let res = upload::upload_image(args.name);
+    println!("Original file: {}", res.original);
+    for file in res.resized {
+        println!("Resized: {}", file);
+    }
+}
