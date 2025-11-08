@@ -1,3 +1,4 @@
 # rust-s3-processing/Cargo.toml
 [workspace]
 members = ["image-cli", "image-resizer-lamda", "lib"] # You will add your crate names here later
+resolver = "2"
