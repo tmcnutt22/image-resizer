@@ -1,0 +1,9 @@
+# Standard Cargo directories
+/target/
+
+# Cargo-lambda integration specific directories (if you use the CLI)
+.cargo-lambda/
+
+# AWS CDK Toolkit assets (often ignored if you're not deploying via the cdk directory itself)
+.cdk/
+cdk.out/
